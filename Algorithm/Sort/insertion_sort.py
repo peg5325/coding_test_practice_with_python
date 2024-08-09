@@ -7,7 +7,7 @@
 import random
 
 
-def insertionSort(data):
+def insertion_sort(data):
     n = len(data)
     for num in range(n - 1):
         for i in range(num + 1, 0, -1):
@@ -21,4 +21,4 @@ def insertionSort(data):
 
 dataList = random.sample(range(1, 45), 7)
 print(f"정렬 전 : {dataList}")
-print(f"정렬 후 : {insertionSort(dataList)}")
+print(f"정렬 후 : {insertion_sort(dataList)}")

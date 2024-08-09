@@ -8,7 +8,7 @@
 import random
 
 
-def bubbleSort(data):
+def bubble_sort(data):
     swap = 0
     for num in range(len(data) - 1):
         for index in range(len(data) - num - 1):
@@ -32,7 +32,7 @@ def bubbleSort(data):
 dataList = random.sample(range(1, 46), 7)
 
 print(f"정렬 전 : {dataList}")
-print(f"정렬 후 : {bubbleSort(dataList)}")
+print(f"정렬 후 : {bubble_sort(dataList)}")
 
 
 
