@@ -1,6 +1,7 @@
 # 병합 정렬 (Merge Sort)
 # 분할 정복이 사용 되었지만, Memorization 기법은 사용할 필요 X
 import random
+import time
 
 
 def merge_split(data):
@@ -42,6 +43,11 @@ def merge(left, right):
     return sorted_list
 
 
-data_list = random.sample(range(1, 100), 7)
+# data_list = random.sample(range(1, 100), 7)
+data_list = random.sample(range(100_000), 10_000)
 
-print(merge_split(data_list))
+print(f"정렬 전 : {data_list}")
+start = time.time()
+print(f"정렬 후 : {merge_split(data_list)}")
+end = time.time()
+print(f"{end - start: .5f} sec")

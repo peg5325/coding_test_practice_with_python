@@ -6,6 +6,7 @@
 # 시간복잡도 : O(n^2) --> 이중 반복문이므로 최악의 경우
 
 import random
+import time
 
 
 def bubble_sort(data):
@@ -29,11 +30,14 @@ def bubble_sort(data):
     return data
 
 
-dataList = random.sample(range(1, 46), 7)
+# dataList = random.sample(range(1, 46), 7)
+dataList = random.sample(range(100_000), 10_000)
 
 print(f"정렬 전 : {dataList}")
+start = time.time()
 print(f"정렬 후 : {bubble_sort(dataList)}")
-
+end = time.time()
+print(f"{end - start: .5f} sec")
 
 
 

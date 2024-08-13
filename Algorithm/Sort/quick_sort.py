@@ -25,7 +25,13 @@ def qsort(data):
 
 
 import random
+import time
 
-data_list = random.sample(range(1, 100), 10)
+# data_list = random.sample(range(1, 100), 10)
+data_list = random.sample(range(100_000), 10_000)
 
+print(f"정렬 전 : {data_list}")
+start = time.time()
 print(qsort(data_list))
+end = time.time()
+print(f"{end - start: .5f} sec")
